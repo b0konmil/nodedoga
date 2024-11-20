@@ -16,4 +16,10 @@ app.use('/routes', expressRoutes)
 app.use('/routes', greetingRoutes)
 app.use('/routes', nodejsRoutes)
 
+app.use((req, res) => {
+    res.render('/',{
+        path : 'index.html'
+    })
+});
+
 app.listen(PORT, () => console.log(`Hi there!`))
