@@ -2,5 +2,13 @@ import path from 'path'
 import express from 'express'
 import bodyParser from 'body-parser'
 
-app.listen(PORT, () => console.log(`Az Express egy minimalista webes keretrendszer, amely a Node.js-hez készült.`))
+const app=express()
+const PORT = 3000
+const router = express.Router()
 
+
+router.use("/express",(req, res, send) => {
+    res.send("Az Express egy minimalista webes keretrendszer, amely a Node.js-hez készült.")
+});
+
+export default router
